@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import metier.User;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -17,12 +18,13 @@ import java.sql.SQLException;
 
 
 import dao.daoBrahim.SinglotonConnection;
+import dao.daoBrahim.UserImplemnt;
 
 
 
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-  
+	UserImplemnt Dao=new UserImplemnt();
     public LoginServlet() {
       
     }
@@ -64,20 +66,26 @@ public class LoginServlet extends HttpServlet {
 			    
 				  
 			    try {
-			    	String Query="SELECT* FROM users WHERE email=? and passwd=? and role='user'";
+			    	String Query="SELECT* FROM users WHERE email=? and passwd=?";
 					PreparedStatement ps=connection.prepareStatement(Query);
 					ps.setString(1, email);
 					ps.setString(2, password);
 					ResultSet rs=ps.executeQuery(); 
 					if(rs.next()){
 						String username =rs.getString("username");
+						String role=rs.getString("role");
 						session.setAttribute("login",username);
-						response.sendRedirect(request.getContextPath()+"/jsp/utilisateur.jsp"); 
+						if(role.equals("admin")) {
+							response.sendRedirect(request.getContextPath()+"/jsp/admin.jsp");
+						}else if(role.equals("user")) {
+							
+						    response.sendRedirect(request.getContextPath()+"/jsp/utilisateur.jsp"); 
+
+						}
                        
-						
 					}else {
 					    
-						 response.sendRedirect(request.getContextPath()+"/jsp/login.jsp"); 
+						response.sendRedirect(request.getContextPath()+"/jsp/login.jsp"); 
 					}
 					ps.close();
 				} catch (SQLException e) {
@@ -89,13 +97,13 @@ public class LoginServlet extends HttpServlet {
 	           String username=request.getParameter("username");
 	           String email=request.getParameter("email");
 	           String password=request.getParameter("password");
-	           
+	          
+	            User user=new  User(username,email, password);
+	            Dao.save(user);
+	        	response.sendRedirect(request.getContextPath()+"/jsp/sinscrire.jsp"); 
 	
            }
-		
-        
-        
-        
+ 
 }
 
 }

@@ -14,5 +14,4 @@ document.getElementById("form").addEventListener("submit",function(event){
 	message.style.color='red';
 	event.preventDefault();
   }
-  	
 });
