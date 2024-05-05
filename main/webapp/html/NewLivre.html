@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nouveau livres</title>
+  
+      <link rel="stylesheet" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/bootstrap2.min.css">
+      <link rel="stylesheet" href="../css/NewLivre.css">
+
+</head>
+<body>
+
+  <div class="formulaire">
+  
+   <form action="NewLivre.liv" method="post">
+      <div class="mb-3">
+        <label for="tite" class="form-label">Titre :</label>
+        <input type="text" class="form-control" id="titre" name="titre">
+      </div>
+       <div class="mb-3">
+        <label for="auteur" class="form-label">Auteur :</label>
+        <input type="text" class="form-control" id="auteur" name="auteur">
+      </div>
+      <div class="mb-3">
+        <label for="editeur" class="form-label">Editeur :</label>
+        <input type="text" class="form-control" id="editeur" name="editeur">
+      </div>
+      <div class="mb-3">
+        <label for="date" class="form-label">Anne de publication :</label>
+        <input type="date" class="form-control" id="date" name="date">
+      </div>
+      <button type="submit" class="btn btn-primary">Ajoute</button>
+      
+    </form>
+  </div>
+
+</body>
+</html>

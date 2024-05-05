@@ -1,8 +1,11 @@
+
+
 body {
     padding: 0;
     margin: 0;
     background: #f2f6e9;
    }
+   
    .navbar {
     background:#6ab446;
    }
@@ -20,7 +23,6 @@ body {
    .navbar-collapse {
     justify-content: flex-end;
    }
-   .img1{
-    width:5%;
-    
-   }
+   
+   
+ 
