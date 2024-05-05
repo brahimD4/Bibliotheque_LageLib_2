@@ -12,7 +12,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-md">
-            <img class="img1" src="OIP.jpeg" alt="">
+            <img id="logo" src="./images/pile-de-livres.png" alt="" style="width:45px">
          
             <div class="collapse navbar-collapse" id="main-navigation">
              

@@ -15,29 +15,29 @@
 <head>
 <meta charset="UTF-8">
 <title>Espace admin</title>
-<link rel="stylesheet" href="../css/utilisateur.css">
+<link rel="stylesheet" href="../css/navbar.css">
 </head>
 <body>
-  <div class="navbar">
-        <img id="profil" src="../images/accueil.png" alt="">
+ <div class="navbare">
+        <img id="profil" src="../images/pile-de-livres.png" alt="">
      
-        <div class="nav" >
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+        <div class="nave" >
+            <ul class="navbar-nave">
+                <li class="nave-item">
+                    <a class="nave-link" href="#">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Gestion livres</a>
+                <li class="nave-item">
+                    <a class="nave-link" href="<%=request.getContextPath()%>/livres.liv">Gestoion livres</a>
                 </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Gestion Emprunts</a>
+                <li class="nave-item">
+                    <a class="nave-link" href="#">Gestoion Emprunts</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<%=request.getContextPath()%>/logout.java">Logout</a>
+                <li class="nave-item">
+                    <a class="nave-link" href="<%=request.getContextPath()%>/logout.java">Logout</a>
                 </li>
-                <li class="nav-item">
+                <li class="nave-item">
                     <div class="profil">
-                        <a class="nav-link" href="jsp/profil.jsp"><img id="profil" src="../images/profil.png"></a>
+                        <a class="nave-link" href="#"><img id="profil" src="../images/profil.png"></a>
                         <span><%=login%></span>
                     </div>
                 
@@ -47,7 +47,7 @@
     </div>
     <div class="content">
     
-   
+   <h1>espace <%=login%></h1>
     </div>
 </body>
 </html>

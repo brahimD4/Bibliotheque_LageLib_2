@@ -1,0 +1,40 @@
+
+ 
+.panel {
+    margin: 0;
+    width: 70%;
+    
+    
+}
+
+.panel-heading{
+  padding: 3px; 
+}
+
+.panel-heading form{
+   margin: 0;
+}
+.table{
+   margin: 0;
+
+}
+table {
+  
+/*     background-color: #c9e955; */
+}
+.action{
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+.action_icon{
+    margin: 8px;
+    width: 20px;
+}
+#icon_Ajouter{
+    width: 30px;
+}
+
+
+
+
